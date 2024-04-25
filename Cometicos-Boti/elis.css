@@ -1,0 +1,258 @@
+
+
+:root {
+    --rosinha: #ffebcd;
+    --rosão: #dc143c;
+    --preto: #000000; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; 
+}
+
+body{
+   
+    background-color: var(--rosinha);
+    color: var(--preto);
+}
+
+.menu {
+    display: none;
+}
+
+.cabecalho-menu{
+    gap: 80px;
+    padding: 2% 0% 0% 15%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .container-menu {
+    display: none;
+ }
+
+ .menu-link{
+    display: none;
+ }
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    background-color: var(--rosão);
+    padding: 1%;
+    text-align: center;
+}
+
+.cabecalho-menu-link{
+    flex-direction: row;
+    padding: 10%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--preto);
+    text-decoration: none;
+} 
+
+.cabecalho-menu-link:hover {
+    color: var(--rosão);
+}
+
+.corpo {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+
+.conteudo-texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-transform: uppercase;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+.titulo-destaque {
+    color: var(--rosão);
+}
+
+.textinho {
+    font-size: 1.4rem;
+}
+
+.img-principal {
+    max-width: 50%;
+}
+
+.b-e-t {
+    padding: 2%;
+}
+
+.botao {
+    background: var(--rosão);
+    border-radius: 6px;
+    width: 50%;
+    height: 50%;
+    font-size: 1.7rem;
+    padding: 2%;
+}
+
+.botao:hover {
+    color: var(--rosinha);
+}
+
+.rodape {
+    color: var(--rosão);
+    background: var(--preto);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center; 
+    position: sticky;
+    padding: 3% 0%;
+}
+
+/* TABLET /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 1397px){
+    .cabecalho-menu-link {
+        padding: 2% 5%;
+
+    }
+
+    header {
+        position: relative;
+    }
+
+    .corpo {
+        flex-direction: column-reverse;
+        padding: 10%;
+     }
+
+     .conteudo-texto {
+        min-width: 80%;
+     }
+
+     .menu-link{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        list-style-type: none;
+        text-transform: uppercase;
+     }
+
+     .menu-itens{
+        display: none;
+        position: absolute;
+        top: 100%;
+        padding-left: 15%;
+        color: var(--rosão);
+     }
+
+     .menu-elinks {
+        text-align: center;
+        padding: 0.6em;
+     }
+
+     .container-menu:checked~.menu-itens{
+        display: block;
+    }      
+    
+    .alinhamento-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .rodape {
+        font-size: 1.5rem;
+    }
+
+     
+
+    
+}
+
+
+
+/* MOBILE /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media  screen and (max-width: 780px) {
+
+    
+    .corpo {
+        gap: 20px;
+        flex-direction: column-reverse;
+        padding: 20%;
+    }
+
+    
+    .cabecalho-menu {
+        padding: 5% 5%;
+        gap: 40px;
+        
+    }
+    
+    .logo {
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: var(--rosão);
+        padding: 2%;
+    }
+    
+    .menu {
+        display: block;
+        padding: 0% 0% 0% 80%;
+    }
+
+    .cabecalho-menu-link{
+        display: none;
+    } 
+
+    .conteudo-texto {
+        width: 80%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .textinho {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .botao {
+        width: 50%;
+        height: 50%;
+        font-size: 1rem;
+        padding: 0%;
+    }
+    
+
+    .img-principal {
+        max-width: 80%;
+        padding-right: 30% ;
+    }
+}
